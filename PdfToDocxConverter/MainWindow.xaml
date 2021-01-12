@@ -1,0 +1,13 @@
+﻿<Window x:Class="PdfToDocxConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PdfToDocxConverter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="btnSelectInputFile" Content="Choose a File" Margin="255,206,310,185" Click="btnSelectInputFile_Click"/>
+        <TextBox Name="TextBox" Text="Select the file you would like to convert to a word document." TextWrapping="Wrap" Margin="182,130,234,256" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
