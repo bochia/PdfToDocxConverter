@@ -20,7 +20,8 @@ namespace PdfToDocxConverter
 
             var directoryPath = System.IO.Path.GetDirectoryName(openFileDialog.FileName);
             var fileNameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(openFileDialog.SafeFileName);
-            var filePathWithoutExtension = directoryPath + "\\" + fileNameWithoutExtension;
+            var wordDocxFilePath = directoryPath + "\\" + fileNameWithoutExtension + ".docx";
+
 
             SautinSoft.PdfFocus f = new SautinSoft.PdfFocus();
             f.OpenPdf(openFileDialog.FileName);
@@ -28,7 +29,7 @@ namespace PdfToDocxConverter
             if (f.PageCount > 0)
             {
                 f.WordOptions.Format = SautinSoft.PdfFocus.CWordOptions.eWordDocument.Docx;
-                f.ToWord($"{filePathWithoutExtension}.docx");
+                f.ToWord(wordDocxFilePath);
             }
         }
 
